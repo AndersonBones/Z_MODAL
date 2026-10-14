@@ -1,0 +1,7 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "ZTAB_MODAL"
+    ]
+  }
+}

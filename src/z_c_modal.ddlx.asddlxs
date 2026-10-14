@@ -1,0 +1,115 @@
+@Metadata.layer: #CORE
+
+
+@UI.headerInfo: {
+    typeName:       'Gestão de Placa',
+    typeNamePlural: 'Gestão de Placas',
+    title: {
+        type:  #STANDARD,
+        value: 'Placa'
+    },
+    
+    description:{
+        value: 'ModalTxr'
+    }
+}
+
+annotate entity Z_C_MODAL
+    with 
+{
+
+     // Seção da Object Page
+    @UI.facet: [{
+        id:       'Modal',
+        purpose:  #STANDARD,
+        type:     #IDENTIFICATION_REFERENCE,
+        label:    'Modal',
+        position: 10
+    }]
+    
+    
+    @UI.hidden: true
+    ModalId;
+    
+    
+    
+ 
+    // Flight Travel Number
+    @UI.lineItem: [{
+        position: 10,
+        label:    'Código do Modal'
+    }]
+    
+    @UI.identification: [{
+        position: 10,
+        label:    'Código do Modal'
+    }]
+    @EndUserText: {
+        label: 'Código do Modal'
+    }
+    ModalCod;
+    
+    
+      // Customer Number
+    @UI.lineItem: [{
+        position: 20,
+        label:    'Descrição do Modal'
+    }]
+    @UI.selectionField: [{
+        position: 20
+    }]
+    @UI.identification: [{
+        position: 20,
+        label:    'Descrição do Modal'
+    }]
+    ModalTxr;
+    
+    
+    // Travel Description
+    @UI.lineItem: [{
+        position: 30,
+        label:    'Placa do Modal'
+    }]
+    @UI.identification: [{
+        position: 30,
+        label:    'Placa do Modal'
+    }]
+    Placa;
+
+
+    // Travel Start Date
+    @UI.lineItem: [{
+        position: 40,
+        label:    'Data Inicio'
+    }]
+    @UI.identification: [{
+        position: 40,
+        label:    'Data Inicio'
+    }]
+    Stdat;
+
+
+    // Travel End Date
+    @UI.lineItem: [{
+        position: 50,
+        label:    'Data Final'
+    }]
+    @UI.identification: [{
+        position: 50,
+        label:    'Data Final'
+    }]
+    Enddat;
+    
+    
+    // Travel End Date
+    @UI.lineItem: [{
+        position: 50,
+        label:    'Status'
+    }]
+    @UI.identification: [{
+        position: 50,
+        label:    'Status'
+    }]
+    Status;
+    
+}

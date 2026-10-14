@@ -1,0 +1,19 @@
+managed; // implementation in class zbp_i_modal unique;
+
+define behavior for Z_I_MODAL //alias <alias_name>
+persistent table ZTAB_PLACAS
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for ZTAB_PLACAS corresponding{
+    ModalCod = modal_cod;
+    ModalId = modal_id;
+    ModalTxr = modal_txr;
+
+  }
+}

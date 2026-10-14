@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZMODAL Service Definition'
+define service Z_MODAL_UI {
+  expose Z_C_MODAL as Modal;
+}
